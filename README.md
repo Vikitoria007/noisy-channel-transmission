@@ -36,3 +36,26 @@ cd video_transmission
 pip install numpy matplotlib pillow opencv-python
 python video_transmission.py
 ```
+
+---
+
+## Результаты (для видео)
+
+| Файл | Что показывает |
+|------|----------------|
+| ber_curve.png | График BER от SNR |
+| 1_comparison.png | Сравнение исходного и восстановленного кадра |
+| 2constellation.png | Созвездие QPSK |
+| frame_comparison_1..5.png | Покадровое сравнение |
+
+---
+
+## Автор
+
+**Виктория Комарова** (Vikitoria007)
+
+## Лицензия
+
+Проект распространяется под лицензией **MIT**.
+
+Подробнее: [LICENSE](LICENSE)
