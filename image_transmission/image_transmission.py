@@ -1,3 +1,9 @@
+# ============================================
+# Author: Виктория Комарова (Vikitoria007)
+# License: MIT
+# GitHub: https://github.com/Vikitoria007/noisy-channel-transmission
+# ============================================
+
 from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt 
