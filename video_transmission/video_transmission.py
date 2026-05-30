@@ -266,6 +266,7 @@ if __name__ == "__main__":
         plt.tight_layout()
         plt.savefig(f"frame_comparison_{i+1}.png")
         plt.close()
+        
     print(f"сохранено {num_comparisons} покадровых сравнений")
     print("восстановленное видео сохранено как recovered_kitten.avi")
     
@@ -311,15 +312,21 @@ if __name__ == "__main__":
 
         cv2.imshow("Live 5G transmission (press + / - / q)", display)
 
-        key = cv2.waitKey(30) & 0xFF
+        key = cv2.waitKey(50) & 0xFF
         if key == ord('q'):
             break 
-        elif key == ord('+'):
+
+        if key == ord('+'):
             snr_live = min(snr_live + 5, 40) 
             print(f"SNR = {snr_live} dB (качество улучшается)")
-        elif key == ord("-"):
+            cv2.waitKey(200)
+            continue
+
+        if key == ord("-"):
             snr_live = max(snr_live - 5, 0)
             print(f"SNR = {snr_live} dB (шума становится больше)")
+            cv2.waitKey(200)
+            continue
         
         frame_count += 1
 
